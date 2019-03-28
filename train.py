@@ -1,0 +1,3 @@
+
+
+MAX_SEQUENCE_LENGTH = 20
