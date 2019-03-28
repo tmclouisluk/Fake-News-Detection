@@ -21,6 +21,7 @@ def clean(data):
         filtered_words = [word.lower() for word in text if word not in stopwords.words('english')]
         return filtered_words
 
+    nltk.download('stopwords')
     data['cleaned_statement'] = data.loc[:, 'Statement'].apply(clean_text)
     data['text_array'] = data.loc[:, 'cleaned_statement'].apply(clean_stopwords)
 
